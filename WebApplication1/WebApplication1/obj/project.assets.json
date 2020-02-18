@@ -12563,11 +12563,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\45300889873\\Documents\\SQL\\SQL\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\45300889873\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\45300889873\\Documents\\SQL\\SQL\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Users\\45300889873\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\45300889873\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\45300889873\\Documents\\SQL\\SQL\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\45300889873\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
