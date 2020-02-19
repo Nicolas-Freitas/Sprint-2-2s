@@ -16,6 +16,7 @@ namespace WebApplication1.Interfaces
         void Cadastrar(GeneroDomain generoDomain);
         void Alterar(GeneroDomain generoDomain);
         void Deletar(int id);
+        GeneroDomain BuscarPorId(int id);
     }
 }
 

@@ -34,7 +34,7 @@ namespace WebApplication1.Controller
         public IActionResult Cadastrar(GeneroDomain generoDomain)
         {
             _generoRepository.Cadastrar(generoDomain);
-            return Ok();
+            return StatusCode(201);
         }
 
         [HttpPut("{id}")]
@@ -51,7 +51,20 @@ namespace WebApplication1.Controller
         public IActionResult Deletar(int id)
         {
             _generoRepository.Deletar(id);
-            return Ok();
+            return Ok("Gênero deletado");
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            GeneroDomain generoBuscado = _generoRepository.BuscarPorId(id);
+
+            if (generoBuscado == null)
+            {
+                return NotFound("Nenhum gênero encontrado");
+            }
+
+            return Ok(generoBuscado);
         }
     }
 }

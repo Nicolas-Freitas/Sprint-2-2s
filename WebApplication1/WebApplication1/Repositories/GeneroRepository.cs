@@ -84,43 +84,44 @@ namespace WebApplication1.Repositories
 
                 cmd.Parameters.AddWithValue("@IdGenero", id);
                 con.Open();
-    
+
                 cmd.ExecuteNonQuery();
 
             }
         }
-
-        public List<GeneroDomain> ListarJustone()
+        public GeneroDomain BuscarPorId(int id)
         {
-            List<GeneroDomain> generos = new List<GeneroDomain>();
-
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string query = "select IdGenero, Nome from Genero";
+                string querySelectById = "select IdGenero, Nome from Generos where IdGenero = @Id";
+
                 con.Open();
 
                 SqlDataReader rdr;
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlCommand cmd = new SqlCommand(querySelectById, con))
                 {
+                    cmd.Parameters.AddWithValue("@Id", id);
+
                     rdr = cmd.ExecuteReader();
 
-                    while (rdr.Read())
+                    if (rdr.Read())
                     {
                         GeneroDomain genero = new GeneroDomain
                         {
-                            IdGenero = Convert.ToInt32(rdr[0]),
-                            Nome = rdr["Nome"].ToString()
+                            IdGenero = Convert.ToInt32(rdr["IdFilme"])
+
+                            ,
+                            Nome = rdr["Titulo"].ToString()
                         };
 
-                        generos.Add(genero);
+                        return genero;
                     }
+
+                    return null;
                 }
             }
-
-            return generos;
-
         }
-
     }
 }
+
