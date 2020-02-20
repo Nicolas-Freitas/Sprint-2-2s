@@ -21,5 +21,17 @@ values ('Furiosos muito velozes vrum vrum relampago marquinhos grau de moto',1)
 
 select * from Filme
 
-select Titulo,Genero.Nome from Filme 
+select 
+
+create procedure FilmeGenero
+as
+select Filme.Titulo, Genero.Nome, Filme.IdFilme, Genero.IdGenero from Filme 
 inner join Genero on Filme.IdGenero = Genero.IdGenero
+
+
+exec FilmeGenero
+
+
+select Filme.Titulo, Genero.Nome, Filme.IdFilme, Genero.IdGenero from Filme left join Genero on Filme.IdGenero = Genero.IdGenero
+
+SELECT * FROM Filme

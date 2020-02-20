@@ -14,12 +14,13 @@ namespace WebApplication1.Repositories
 
         public void Cadastrar(FilmeDomain filme)
         {
-            string Query = "insert into Filme (Titulo) values (@Titulo)";
+            string Query = "insert into Filme (Titulo,IdGenero) values (@Titulo,@IdGenero)";
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
                 cmd.Parameters.AddWithValue("@Titulo", filme.Titulo);
+                cmd.Parameters.AddWithValue("@IdGenero", filme.IdGenero);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -31,7 +32,7 @@ namespace WebApplication1.Repositories
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string query = "select IdFilme, Titulo from Filme";
+                string query = "SELECT Filme.IdFilme, Filme.Titulo, Filme.IdGenero, Genero.Nome FROM Filme INNER JOIN Genero ON Filme.IdGenero = Genero.IdGenero";
                 con.Open();
 
                 SqlDataReader rdr;
@@ -45,7 +46,16 @@ namespace WebApplication1.Repositories
                         FilmeDomain filme = new FilmeDomain
                         {
                             IdFilme = Convert.ToInt32(rdr[0]),
-                            Titulo = rdr["Titulo"].ToString()
+
+                            Titulo = rdr[1].ToString(),
+
+                            IdGenero = Convert.ToInt32(rdr[2]),
+
+                            Genero = new GeneroDomain
+                            {
+                                IdGenero = Convert.ToInt32(rdr[2]),
+                                Nome = rdr[3].ToString()
+                            }
                         };
 
                         filmes.Add(filme);
@@ -59,13 +69,14 @@ namespace WebApplication1.Repositories
 
         public void Alterar(FilmeDomain filmeDomain)
         {
-            string Query = "update Filme set Titulo = @Titulo Where IdFilme = @IdFilme";
+            string Query = "update Filme set Titulo = @Titulo, IdGenero = @IdGenero Where IdFilme = @Id";
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
                 cmd.Parameters.AddWithValue("@Titulo", filmeDomain.Titulo);
                 cmd.Parameters.AddWithValue("@IdFilme", filmeDomain.IdFilme);
+                cmd.Parameters.AddWithValue("@IdGenero", filmeDomain.IdGenero);
 
                 con.Open();
 
