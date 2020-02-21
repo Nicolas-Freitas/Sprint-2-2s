@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Senai.Peoples.WebApi.Domaing;
+using Senai.Peoples.WebApi.Domains;
 using Senai.Peoples.WebApi.Interfaces;
 using Senai.Peoples.WebApi.Repositories;
 

@@ -1,4 +1,4 @@
-﻿using Senai.Peoples.WebApi.Domaing;
+﻿using Senai.Peoples.WebApi.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;
