@@ -10,17 +10,18 @@ namespace Senai.Peoples.WebApi.Repositories
 {
     public class FuncionarioRepository : IFuncionarioRepository
     {
-        private string StringConexao = "Server= localhost; Database= M_Peoples; Integrated Security=True;";
+        private string StringConexao = "Data Source=DEV7\\SQLEXPRESS; initial catalog=M_Peoples; user Id=sa; pwd=sa@132;";
 
         public void Cadastrar(FuncionarioDomain funcionario)
         {
-            string Query = "insert into Funcionarios (Nome,Sobrenome) values (@Nome,@Sobrenome)";
+            string Query = "insert into Funcionarios (Nome,Sobrenome,DataNasc) values (@Nome,@Sobrenome,@DataNasc)";
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
                 cmd.Parameters.AddWithValue("@Nome", funcionario.Nome);
                 cmd.Parameters.AddWithValue("@Sobrenome", funcionario.Sobrenome);
+                cmd.Parameters.AddWithValue("@DataNasc", funcionario.DataNasc);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -32,7 +33,7 @@ namespace Senai.Peoples.WebApi.Repositories
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string query = "select IdFuncionario, Nome, Sobrenome from Funcionarios";
+                string query = "select IdFuncionario, Nome, Sobrenome, DataNasc from Funcionarios";
                 con.Open();
 
                 SqlDataReader rdr;
@@ -49,7 +50,9 @@ namespace Senai.Peoples.WebApi.Repositories
 
                             Nome = rdr[1].ToString(),
 
-                            Sobrenome = rdr[2].ToString()
+                            Sobrenome = rdr[2].ToString(),
+
+                            DataNasc = Convert.ToDateTime(rdr["DataNasc"])
                         };
 
                         funcionarios.Add(funcionario);
@@ -64,7 +67,7 @@ namespace Senai.Peoples.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string querySelectById = "select IdFuncionario, Nome, Sobrenome from Funcionarios where IdFuncionario = @Id";
+                string querySelectById = "select IdFuncionario, Nome, Sobrenome, DataNasc from Funcionarios where IdFuncionario = @Id";
 
                 con.Open();
 
@@ -82,7 +85,8 @@ namespace Senai.Peoples.WebApi.Repositories
                         {
                             IdFuncionario = Convert.ToInt32(rdr["IdFuncionario"]),
                             Nome = rdr["Nome"].ToString(),
-                            Sobrenome = rdr["Sobrenome"].ToString()
+                            Sobrenome = rdr["Sobrenome"].ToString(),
+                            DataNasc = Convert.ToDateTime(rdr["DataNasc"])
                         };
 
                         return funcionario;
@@ -91,10 +95,7 @@ namespace Senai.Peoples.WebApi.Repositories
                     return null;
                 }
             }
-
         }
-
-
         public void Deletar(int id)
         {
             string Query = "delete from Funcionarios where IdFuncionario = @IdFuncionario";
@@ -113,15 +114,18 @@ namespace Senai.Peoples.WebApi.Repositories
 
         public void Atualizar(FuncionarioDomain funcionario)
         {
-            string Query = "update Funcionarios set Nome = @Nome, Sobrenome = @Sobrenome WHERE IdFuncionario = @IdFuncionario";
+            
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
+                string Query = "update Funcionarios set Nome = @Nome, Sobrenome = @Sobrenome, DataNasc = @DataNasc where IdFuncionario = @IdFuncionario";
+                con.Open();
                 SqlCommand cmd = new SqlCommand(Query, con);
                 cmd.Parameters.AddWithValue("@Nome", funcionario.Nome);
                 cmd.Parameters.AddWithValue("@Sobrenome", funcionario.Sobrenome);
+                cmd.Parameters.AddWithValue("@DataNasc", funcionario.DataNasc);
                 cmd.Parameters.AddWithValue("@IdFuncionario", funcionario.IdFuncionario);
-                con.Open();
+                
                 cmd.ExecuteNonQuery();
             }
         }

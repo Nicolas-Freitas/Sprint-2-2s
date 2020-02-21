@@ -8,3 +8,6 @@ create table Funcionarios (
 	Nome varchar (100) not null,
 	Sobrenome varchar (100) not null
 )
+
+alter table Funcionarios 
+add DataNasc date 

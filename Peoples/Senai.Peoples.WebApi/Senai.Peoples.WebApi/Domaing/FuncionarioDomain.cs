@@ -9,13 +9,16 @@ namespace Senai.Peoples.WebApi.Domaing
     public class FuncionarioDomain
     {
         public int IdFuncionario { get; set; }
+
         [Required(ErrorMessage = "O nome do funcionário é obrigatório!")]
-
         public string Nome { get; set; }
+
+
         [Required(ErrorMessage = "O sobrenome do funcionário é obrigatório!")]
-
-
         public string Sobrenome { get; set; }
+
+        public DateTime DataNasc { get; set; }
+
 
     }
 }
