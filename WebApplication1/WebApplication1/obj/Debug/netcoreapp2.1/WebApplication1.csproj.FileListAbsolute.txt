@@ -40,3 +40,17 @@ C:\Users\45300889873\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Deb
 C:\Users\45300889873\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.dll
 C:\Users\45300889873\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.pdb
 C:\Users\45300889873\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorTargetAssemblyInfo.cache
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.deps.json
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.runtimeconfig.json
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.runtimeconfig.dev.json
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.dll
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.pdb
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csprojAssemblyReference.cache
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorAssemblyInfo.cache
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorAssemblyInfo.cs
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.AssemblyInfoInputs.cache
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.AssemblyInfo.cs
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorTargetAssemblyInfo.cache
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.dll
+C:\Users\nsilv\Desktop\Sprint-2-2s\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb

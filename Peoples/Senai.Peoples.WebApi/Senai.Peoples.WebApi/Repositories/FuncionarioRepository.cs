@@ -10,7 +10,7 @@ namespace Senai.Peoples.WebApi.Repositories
 {
     public class FuncionarioRepository : IFuncionarioRepository
     {
-        private string StringConexao = "Data Source=DEV7\\SQLEXPRESS; initial catalog = M_Peoples; user Id=sa; pwd=sa@132";
+        private string StringConexao = "Server= localhost; Database= M_Peoples; Integrated Security=True;";
 
         public void Cadastrar(FuncionarioDomain funcionario)
         {
@@ -60,22 +60,6 @@ namespace Senai.Peoples.WebApi.Repositories
             return funcionarios;
         }
 
-        public void Alterar(FuncionarioDomain funcionarioDomain)
-        {
-            string Query = "update Funcionarios set Nome = @Nome, Sobrenome = @Sobrenome Where IdFuncionario = @Id";
-
-            using (SqlConnection con = new SqlConnection(StringConexao))
-            {
-                SqlCommand cmd = new SqlCommand(Query, con);
-                cmd.Parameters.AddWithValue("@Nome", funcionarioDomain.Nome);
-                cmd.Parameters.AddWithValue("@Sobrenome", funcionarioDomain.Sobrenome);
-
-                con.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-        }
-
         public FuncionarioDomain BuscarPorId(int id)
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
@@ -110,6 +94,7 @@ namespace Senai.Peoples.WebApi.Repositories
 
         }
 
+
         public void Deletar(int id)
         {
             string Query = "delete from Funcionarios where IdFuncionario = @IdFuncionario";
@@ -122,6 +107,21 @@ namespace Senai.Peoples.WebApi.Repositories
                 cmd.Parameters.AddWithValue("@IdFuncionario", id);
                 con.Open();
 
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Atualizar(FuncionarioDomain funcionario)
+        {
+            string Query = "update Funcionarios set Nome = @Nome, Sobrenome = @Sobrenome WHERE IdFuncionario = @IdFuncionario";
+
+            using (SqlConnection con = new SqlConnection(StringConexao))
+            {
+                SqlCommand cmd = new SqlCommand(Query, con);
+                cmd.Parameters.AddWithValue("@Nome", funcionario.Nome);
+                cmd.Parameters.AddWithValue("@Sobrenome", funcionario.Sobrenome);
+                cmd.Parameters.AddWithValue("@IdFuncionario", funcionario.IdFuncionario);
+                con.Open();
                 cmd.ExecuteNonQuery();
             }
         }

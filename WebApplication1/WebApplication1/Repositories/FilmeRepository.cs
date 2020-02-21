@@ -10,7 +10,7 @@ namespace WebApplication1.Repositories
 {
     public class FilmeRepository : IFilmeRepository
     {
-        private string StringConexao = "Data Source=DEV7\\SQLEXPRESS; initial catalog = Filmes; user Id=sa; pwd=sa@132";
+        private string StringConexao = "Server= localhost; Database= Filmes; Integrated Security=True;";
 
         public void Cadastrar(FilmeDomain filme)
         {

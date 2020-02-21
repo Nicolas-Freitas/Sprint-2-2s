@@ -13,53 +13,45 @@ namespace Senai.Peoples.WebApi.Controller
     [ApiController]
     public class FuncionariosController : ControllerBase
     {
-        private IFuncionarioRepository _funcionarioRepository { get; set; }
+        FuncionarioRepository FuncionarioRepository = new FuncionarioRepository();
 
-        public FuncionariosController()
-        {
-            _funcionarioRepository = new FuncionarioRepository();
-        }
-        [HttpGet]
-        public IEnumerable<FuncionarioDomain> Get()
-        {
-            return _funcionarioRepository.Listar();
-        }
         [HttpPost]
-        public IActionResult Cadastrar(FuncionarioDomain FuncionarioDomain)
+        public IActionResult Cadastrar(FuncionarioDomain funcionarioDomain)
         {
-            _funcionarioRepository.Cadastrar(FuncionarioDomain);
+            FuncionarioRepository.Cadastrar(funcionarioDomain);
             return Ok();
         }
 
-        [HttpPut("{id}")]
-
-        public IActionResult Alterar(FuncionarioDomain FuncionarioDomain, int id)
+        [HttpGet]
+        public IEnumerable<FuncionarioDomain> Listar()
         {
-            FuncionarioDomain.IdFuncionario = id;
-            _funcionarioRepository.Alterar(FuncionarioDomain);
+            return FuncionarioRepository.Listar();
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            FuncionarioDomain Funcionario = FuncionarioRepository.BuscarPorId(id);
+            if (Funcionario == null)
+            {
+                return NotFound();
+            }
+            return Ok(Funcionario);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, FuncionarioDomain funcionario)
+        {
+            funcionario.IdFuncionario = id;
+            FuncionarioRepository.Atualizar(funcionario);
             return Ok();
         }
 
         [HttpDelete("{id}")]
-
         public IActionResult Deletar(int id)
         {
-            _funcionarioRepository.Deletar(id);
+            FuncionarioRepository.Deletar(id);
             return Ok();
-        }
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            FuncionarioDomain funcionarioBuscado = _funcionarioRepository.BuscarPorId(id);
-
-            if (funcionarioBuscado == null)
-            {
-                return NotFound("Nenhum funcionario encontrado");
-            }
-
-            return Ok(funcionarioBuscado);
         }
     }
 }
-    

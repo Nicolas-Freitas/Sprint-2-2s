@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\Exemplo bd\\senai.Filmes.WebApi\\senai.Filmes.WebApi\\senai.Filmes.WebApi.csproj": {}
+    "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\Exemplo bd\\senai.Filmes.WebApi\\senai.Filmes.WebApi\\senai.Filmes.WebApi.csproj": {
+    "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\Exemplo bd\\senai.Filmes.WebApi\\senai.Filmes.WebApi\\senai.Filmes.WebApi.csproj",
-        "projectName": "senai.Filmes.WebApi",
-        "projectPath": "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\Exemplo bd\\senai.Filmes.WebApi\\senai.Filmes.WebApi\\senai.Filmes.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectName": "WebApplication1",
+        "projectPath": "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\nsilv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\Exemplo bd\\senai.Filmes.WebApi\\senai.Filmes.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\nsilv\\Desktop\\Sprint-2-2s\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -60,7 +60,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.1.10, )"
+              "version": "[2.1.9, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
