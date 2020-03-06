@@ -1,0 +1,14 @@
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\bin\Debug\netcoreapp2.1\InLockFirstDataBase.deps.json
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\bin\Debug\netcoreapp2.1\InLockFirstDataBase.runtimeconfig.json
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\bin\Debug\netcoreapp2.1\InLockFirstDataBase.runtimeconfig.dev.json
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\bin\Debug\netcoreapp2.1\InLockFirstDataBase.dll
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\bin\Debug\netcoreapp2.1\InLockFirstDataBase.pdb
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.csprojAssemblyReference.cache
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.csproj.CoreCompileInputs.cache
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.RazorAssemblyInfo.cache
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.RazorAssemblyInfo.cs
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.AssemblyInfoInputs.cache
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.AssemblyInfo.cs
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.RazorTargetAssemblyInfo.cache
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.dll
+C:\Users\45300889873\source\repos\InLockFirstDataBase\InLockFirstDataBase\obj\Debug\netcoreapp2.1\InLockFirstDataBase.pdb
